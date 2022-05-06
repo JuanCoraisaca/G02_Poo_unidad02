@@ -19,6 +19,7 @@ public class AutoVista {
      */
     public static void main(String[] args) {
 
+        
         var autoControlador = new AutoControlador();
         autoControlador.crear(2010, "ADF 674", 01, "Negro", "Juan", 016674, 2889, "Miraflores", 001);
         autoControlador.crear(2015, "GAP 543", 02, "Blanco", "Pedro", 016675, 4060, "Larga", 002);
