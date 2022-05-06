@@ -9,6 +9,7 @@ package Modelo;
  *
  * @author usuario
  */
+
 public class Propietario {
     private String nombre;
     private int cedula;

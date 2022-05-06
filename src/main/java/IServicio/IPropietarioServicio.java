@@ -12,6 +12,7 @@ import java.util.List;
  *
  * @author usuario
  */
+
 public interface IPropietarioServicio {
     public Propietario crear(Propietario propietario);
     public Propietario modificar(int codigo, Propietario propietario);
