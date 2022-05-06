@@ -7,7 +7,7 @@ package Controlador;
 
 import Modelo.Auto;
 import Modelo.Propietario;
-import Servicio.AutoServicio;
+import IServicio.AutoServicio;
 import java.util.List;
 
 /**
@@ -16,24 +16,26 @@ import java.util.List;
  */
 public class AutoControlador {
     
+    
+    
     private AutoServicio autoServicio = new AutoServicio();
     
-    public Auto crear(int y,String p,int c,String cl,
-        String n,int ce,int tl,String d,int co){
-        var propietario = new Propietario(n,ce,tl,d,co);
-        var auto = new Auto(y,p,c,cl);
+    public Auto crear(int year,String placa,int codigo,String color,
+        String nombre,int cedula,int telefono,String direccion,int codigo1){
+        var unPropietario = new Propietario(nombre,cedula,telefono,direccion,codigo1);
+        var auto = new Auto(year,placa,codigo,color);
         this.autoServicio.crear(auto);
         return auto;
         
         
     }
     
-    public Auto eliminar(int c) {
-        return this.autoServicio.eliminar(c);
+    public Auto eliminar(int codigo) {
+        return this.autoServicio.eliminar(codigo);
     }
     
-    public Auto modificar(int c, Auto a) {
-        return this.autoServicio.modificar(c,a);
+    public Auto modificar(int codigo, Auto auto) {
+        return this.autoServicio.modificar(codigo,auto);
     }
     
     

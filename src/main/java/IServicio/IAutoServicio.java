@@ -13,9 +13,9 @@ import java.util.List;
  * @author usuario
  */
 public interface IAutoServicio {
-    public Auto crear(Auto a);
-    public Auto modificar(int c, Auto a);
-    public Auto eliminar(int c);
-    public int buscarPosicion(int c);
+    public Auto crear(Auto auto);
+    public Auto modificar(int codigo, Auto auto);
+    public Auto eliminar(int codigo);
+    public int buscarPosicion(int codigo);
     public List<Auto> listar();
 }

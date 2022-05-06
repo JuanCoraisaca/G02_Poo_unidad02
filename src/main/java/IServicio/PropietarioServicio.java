@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servicio;
+package IServicio;
 
-import IServicio.IPropietarioServicio;
+
 import Modelo.Propietario;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,22 +19,22 @@ public class PropietarioServicio implements IPropietarioServicio{
     private final List<Propietario> propietarioList = new ArrayList<>();
 
     @Override
-    public Propietario crear(Propietario p) {
-        this.crear(p);
-        return p;
+    public Propietario crear(Propietario propietario) {
+        this.propietarioList.add(propietario);
+        return propietario;
         }
 
     @Override
-    public Propietario modificar(int c, Propietario p) {
-        this.propietarioList.set(this.buscarPosicion(c), p);
-        return p;
+    public Propietario modificar(int codigo, Propietario propietario) {
+        this.propietarioList.set(this.buscarPosicion(codigo), propietario);
+        return propietario;
         }
 
     @Override
-    public Propietario eliminar(int c) {
-        var barco=this.propietarioList.get(this.buscarPosicion(c));
-        this.propietarioList.remove(this.buscarPosicion(c));
-        return barco;
+    public Propietario eliminar(int codigo) {
+        var unPropietario=this.propietarioList.get(this.buscarPosicion(codigo));
+        this.propietarioList.remove(this.buscarPosicion(codigo));
+        return unPropietario;
         }
 
     @Override
@@ -43,12 +43,12 @@ public class PropietarioServicio implements IPropietarioServicio{
         }
 
     @Override
-    public int buscarPosicion(int c) {
+    public int buscarPosicion(int codigo) {
           
         var posicion=-1;
         var i=0;
-        for(var auxBarco:this.propietarioList){
-            if(auxBarco.getCodigo()==c){
+        for(var auxPropietario:this.propietarioList){
+            if(auxPropietario.getCodigo()==codigo){
                 posicion=i;
                 break;
             }

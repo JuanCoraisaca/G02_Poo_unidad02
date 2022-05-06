@@ -18,29 +18,23 @@ public class AutoVista {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         var autoControlador = new AutoControlador();
-        autoControlador.crear(2017, "AHD 0972", 1234, "Negro", "Juan", 0106675427, 286675, "Miraflores", 123);
-        autoControlador.crear(2017, "AHD 0972", 1234, "Negro", "Juan", 0106675427, 286675, "Miraflores", 123);
-        autoControlador.crear(2017, "AHD 0972", 1234, "Negro", "Juan", 0106675427, 286675, "Miraflores", 123);
-        autoControlador.crear(2017, "AHD 0972", 1234, "Negro", "Juan", 0106675427, 286675, "Miraflores", 123);
-        
-        System.out.println("Listado Inicial");
-        
-        for(Auto a: autoControlador.listar())
-            System.out.println(a.toString());
-        
-        autoControlador.eliminar(2015);
+        autoControlador.crear(2010, "ADF 674", 01, "Negro", "Juan", 016674, 2889, "Miraflores", 001);
+        autoControlador.crear(2015, "GAP 543", 02, "Blanco", "Pedro", 016675, 4060, "Larga", 002);
 
-        System.out.println("Listado Eliminando el año 2015");
-        
-        for(Auto a: autoControlador.listar())
-            System.out.println(a.toString());
+        System.out.println("Lista de Autos");
+        for (Auto auto : autoControlador.listar()) {
+            System.out.println(auto.toString());
 
-        System.out.println("Listado Modificando el año 2019");
-       
-       }
-   
-  }
-    
+        }
+        System.out.println("-------------------------------------------------");
 
+        autoControlador.eliminar(001);
+        System.out.println("Lista Eliminar");
+        for (Auto auto : autoControlador.listar()) {
+            System.out.println(auto.toString());
+          
+        }
+    }
+}

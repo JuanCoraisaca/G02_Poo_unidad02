@@ -13,10 +13,10 @@ import java.util.List;
  * @author usuario
  */
 public interface IPropietarioServicio {
-    public Propietario crear(Propietario p);
-    public Propietario modificar(int c, Propietario p);
-    public Propietario eliminar(int c);
-    public int buscarPosicion(int c);
+    public Propietario crear(Propietario propietario);
+    public Propietario modificar(int codigo, Propietario propietario);
+    public Propietario eliminar(int codigo);
+    public int buscarPosicion(int codigo);
     public List<Propietario> listar();
     
 }

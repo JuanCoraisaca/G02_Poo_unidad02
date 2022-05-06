@@ -24,14 +24,7 @@ public class Auto {
         this.color = color;
     }
 
-    public Auto(int year, Propietario unPropietario, String placa, int codigo, String color) {
-        this.year = year;
-        this.unPropietario = unPropietario;
-        this.placa = placa;
-        this.codigo = codigo;
-        this.color = color;
-        this.unPropietario= unPropietario;
-    }
+    
 
     
     public int calcularYears(int currentYear){

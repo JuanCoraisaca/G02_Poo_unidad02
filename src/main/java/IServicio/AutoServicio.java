@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Servicio;
+package IServicio;
 
 import IServicio.IAutoServicio;
 import Modelo.Auto;
@@ -19,21 +19,21 @@ public class AutoServicio implements IAutoServicio{
     private final List<Auto> autoList = new ArrayList<>();
 
     @Override
-    public Auto crear(Auto a) {
-        this.autoList.add(a);
-        return a;
+    public Auto crear(Auto auto) {
+        this.autoList.add(auto);
+        return auto;
         }
 
     @Override
-    public Auto modificar(int c, Auto a) {
-        this.autoList.set(this.buscarPosicion(c),a);
-        return a;
+    public Auto modificar(int codigo, Auto auto) {
+        this.autoList.set(this.buscarPosicion(codigo),auto);
+        return auto;
         }
 
     @Override
-    public Auto eliminar(int c) {
-        var auto=this.autoList.get(this.buscarPosicion(c));
-        this.autoList.remove(this.eliminar(c));
+    public Auto eliminar(int codigo) {
+        var auto=this.autoList.get(this.buscarPosicion(codigo));
+        this.autoList.remove(this.buscarPosicion(codigo));
         return auto;
         }
 
@@ -43,11 +43,11 @@ public class AutoServicio implements IAutoServicio{
         }
 
     @Override
-    public int buscarPosicion(int c) {
+    public int buscarPosicion(int codigo) {
         var posicion=-1;
         var i=0;
         for(var auxAuto:this.autoList){
-            if(auxAuto.getCodigo()==c){
+            if(auxAuto.getCodigo()==codigo){
                 posicion=i;
                 break;
             }
