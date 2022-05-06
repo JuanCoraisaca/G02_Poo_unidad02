@@ -38,10 +38,6 @@ public class AutoVista {
             System.out.println(a.toString());
 
         System.out.println("Listado Modificando el año 2019");
-        
-         
-       
-        
        
        }
    
